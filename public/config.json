@@ -34,7 +34,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "5d596207-02f0-4894-80f8-3d8f5f4f7f7e",
+      "applicationExtensionKey": "a78b1a79-adf6-481a-bc98-a15e7d9fd587",
        "save": {
            "url": "https://lokes292.herokuapp.com/journeybuilder/save/",
             "verb": "POST",
