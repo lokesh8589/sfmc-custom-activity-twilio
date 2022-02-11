@@ -22,7 +22,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://lokes292.herokuapp.com//journeybuilder/execute/",
+            "url": "https://lokes292.herokuapp.com/journeybuilder/execute/",
             "verb": "POST",
             "body": "",
             "format": "json",
