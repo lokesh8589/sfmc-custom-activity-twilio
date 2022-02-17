@@ -122,7 +122,17 @@ exports.execute = function (req, res) {
              from :'+18304026371',
              to: '+91'+to 
            }) 
-           .then(message => console.log("message id:"+message.sid)) 
+           .then(message => {
+                 console.log("message id:"+message.sid);
+                 var AuthenticationBaseURI = "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
+                 
+                 const data = JSON.stringify({
+                     client_id : "27oou1v6804u1niltlfzwn6r",
+                     client_secret : "QqBAkEzwo3dQcHPLRV89Ig2v",
+                     grant_type : "client_credentials"
+                  })
+                 
+                     }) 
            .done(); 
     // FOR TESTING
     logData(req);
