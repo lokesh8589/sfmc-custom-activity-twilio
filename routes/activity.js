@@ -122,7 +122,7 @@ exports.execute = function (req, res) {
              from :'+18304026371',
              to: '+91'+to 
            }) 
-           .then(message => console.log(message.sid)) 
+           .then(message => console.log("message id:"+message.sid)) 
            .done(); 
     // FOR TESTING
     logData(req);
