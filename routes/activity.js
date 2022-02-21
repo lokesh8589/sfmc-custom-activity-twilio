@@ -131,6 +131,7 @@ exports.execute = function (req, res) {
                      client_secret : "QqBAkEzwo3dQcHPLRV89Ig2v",
                      grant_type : "client_credentials"
                   })
+                 console.log("data:"+ data);
                  const values = {
                      hostname : AuthenticationBaseURI,
                      path : "/v2/token",
