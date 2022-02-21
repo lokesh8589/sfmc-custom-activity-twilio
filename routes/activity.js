@@ -124,7 +124,7 @@ exports.execute = function (req, res) {
            }) 
            .then(message => {
                  console.log("message id:"+message.sid);
-        var AuthenticationBaseURI = "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
+        var AuthenticationBaseURI = "mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
                  
                  const data = JSON.stringify({
                      client_id : "27oou1v6804u1niltlfzwn6r",
