@@ -140,15 +140,15 @@ exports.execute = function (req, res) {
                      }
                  }
                  const getToken = http.request(values,res =>{
-                     var data = "" 
+                     var jsonString = "" 
      
                     res.on('data', (chunk) => {
-                        data += chunk;
+                        jsonString += chunk;
                     });
     
     // Ending the response 
                     res.on('end', () => {
-                        console.log('Body:', JSON.parse(data))
+                        console.log('Body:', JSON.parse(jsonString))
                     });
        
                     }).on("error", (err) => {
