@@ -124,7 +124,7 @@ exports.execute = function (req, res) {
            }) 
            .then(message => {
                  console.log("message id:"+message.sid);
-        var AuthenticationBaseURI = "mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
+        var AuthenticationBaseURI = "mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com"
                  
                  const data = JSON.stringify({
                      client_id : "27oou1v6804u1niltlfzwn6r",
@@ -133,7 +133,7 @@ exports.execute = function (req, res) {
                   })
                  const values = {
                      hostname : AuthenticationBaseURI,
-                     path : "v2/token",
+                     path : "/v2/token",
                      method : "POST",
                      headers : {
                          'Content-Type': 'application/json',
