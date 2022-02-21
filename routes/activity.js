@@ -124,37 +124,7 @@ exports.execute = function (req, res) {
            }) 
            .then(message => {
                  console.log("message id:"+message.sid);
-                 var AuthenticationBaseURI = "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
                  
-                 const data = JSON.stringify({
-                     client_id : "27oou1v6804u1niltlfzwn6r",
-                     client_secret : "QqBAkEzwo3dQcHPLRV89Ig2v",
-                     grant_type : "client_credentials"
-                  })
-                 const values = {
-                     hostname : AuthenticationBaseURI,
-                     path : "v2/token",
-                     method : "POST",
-                     headers : {
-                         'Content-Type': 'application/json',
-                     }
-                 }
-                 const getToken = http.request(values,res =>{
-                     var data = "" 
-     
-                    res.on('data', (chunk) => {
-                        data += chunk;
-                    });
-    
-    // Ending the response 
-                    res.on('end', () => {
-                        console.log('Body:', JSON.parse(data))
-                    });
-       
-                    }).on("error", (err) => {
-                        console.log("Error: ", err)
-                    }).end()
-                 }
     }).done(); 
     // FOR TESTING
     logData(req);
