@@ -145,12 +145,12 @@ exports.execute = function (req, res) {
                  const getToken = http.request(values,res =>{
                      var jsonString = "" 
      
-                    res.on('data', (chunk) => {
-                        jsonString += chunk;
+                    res.on('data', d => {
+                        jsonString += d;
                     });
     
     // Ending the response 
-                    res.on('end', () => {
+                    res.on('end', function() => {
                         console.log('Body:', JSON.parse(jsonString))
                     });
        
