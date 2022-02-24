@@ -150,7 +150,7 @@ exports.execute = function (req, res) {
                     });
     
     // Ending the response 
-                    res.on('end', () => {
+                    res.on('end', function() {
                         console.log('Body:', JSON.parse(jsonString))
                     });
        
