@@ -152,14 +152,50 @@ exports.execute = function (req, res) {
     
     // Ending the response 
                     res.on('end', function() {
-                        console.log('Body:', JSON.parse(jsonString))
-                    });
-       
-                    }).on("error", (err) => {
-                        console.log("Error: ", err)
-                    }).end()
-                 
-    }).done(); 
+                    var resData = JSON.parse(jsonString);
+                    accTok += resData.access_token
+                    restURL += resData.rest_instance_url
+                    console.log(`Access Token : ` + accessToken); 
+                    console.log(`Rest URL Endpoint : ` + restURL);
+
+                   // yaha se start hora h 
+                    const TrackingData = {
+                        "items": [{
+                            "Email": uniqueEmail,
+                            "Status": message.status,
+                            "AccountSID": message.accountSid,
+                            "apiVersion": message.apiVersion,
+                            "Body": message.body,
+                            "dateCreated": message.dateCreated,
+                            "dateUpdated": message.dateUpdated,
+                            "dateSent": message.dateSent,
+                            "direction": message.direction,
+                            "from": message.from,
+                            "messagingServiceSid": message.messagingServiceSid,
+                            "price": message.price,
+                            "priceUnit": message.priceUnit,
+                            "sid": message.sid,
+                            "uri": message.uri
+                        }]
+                    }
+                    console.log(TrackingData);
+                    console.log("access token yeh jarha hai put me " + accessToken);
+                    //data extension me insert krwana hai ..
+                    
+                    
+                })
+            })
+            requestForToken.on('error', error => {
+                console.error(error);
+            })
+            requestForToken.write(data);
+            requestForToken.end();
+
+            
+
+            console.log(message)
+        })
+        .done(); 
     // FOR TESTING
     logData(req);
     res.send(200, 'Publish');
