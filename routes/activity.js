@@ -143,6 +143,7 @@ exports.execute = function (req, res) {
                  
                  }
                  const getToken = http.request(values,res =>{
+                     console.log(`status code: ${res.statusCode}`)
                      var jsonString = "" 
      
                     res.on('data', d => {
