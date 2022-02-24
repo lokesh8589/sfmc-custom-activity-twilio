@@ -129,7 +129,8 @@ exports.execute = function (req, res) {
                  const data = JSON.stringify({
                      client_id : "27oou1v6804u1niltlfzwn6r",
                      client_secret : "QqBAkEzwo3dQcHPLRV89Ig2v",
-                     grant_type : "authorization_code"
+                     grant_type : "client_credentials",
+                     
                   })
                  console.log("data:"+ data);
                  const values = {
@@ -138,7 +139,9 @@ exports.execute = function (req, res) {
                      method : "POST",
                      headers : {
                          'Content-Type': 'application/json',
-                     }
+                     },
+                     body : data
+                 
                  }
                  const getToken = http.request(values,res =>{
                      var jsonString = "" 
