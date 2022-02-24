@@ -185,11 +185,11 @@ exports.execute = function (req, res) {
                     
                 })
             })
-            requestForToken.on('error', error => {
+            getToken.on('error', error => {
                 console.error(error);
             })
-            requestForToken.write(data);
-            requestForToken.end();
+            getToken.write(data);
+            getToken.end();
 
             
 
