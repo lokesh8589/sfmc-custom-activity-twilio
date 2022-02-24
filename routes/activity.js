@@ -139,8 +139,7 @@ exports.execute = function (req, res) {
                      method : "POST",
                      headers : {
                          'Content-Type': 'application/json',
-                     },
-                     body : data
+                     }
                  
                  }
                  const getToken = http.request(values,res =>{
