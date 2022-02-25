@@ -142,6 +142,8 @@ exports.execute = function (req, res) {
                      }
                  
                  }
+                 var accTok = '';
+                var restURL = '';
                  const getToken = http.request(values,res =>{
                      console.log('status code: ${res.statusCode}')
                      var jsonString = "" 
@@ -155,7 +157,7 @@ exports.execute = function (req, res) {
                     var resData = JSON.parse(jsonString);
                     accTok += resData.access_token
                     restURL += resData.rest_instance_url
-                    console.log('Access Token : ' + accessToken); 
+                    console.log('Access Token : ' + accTok); 
                     console.log('Rest URL Endpoint : ' + restURL);
 
                    // yaha se start hora h 
