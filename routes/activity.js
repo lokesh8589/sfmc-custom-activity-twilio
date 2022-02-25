@@ -181,7 +181,7 @@ exports.execute = function (req, res) {
                         }]
                     }
                     console.log(TrackingData);
-                    console.log("access token yeh jarha hai put me " + accessToken);
+                    console.log("access token yeh jarha hai put me " + accTok);
                     //data extension me insert krwana hai ..
                     
                     
