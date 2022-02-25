@@ -143,7 +143,7 @@ exports.execute = function (req, res) {
                  
                  }
                  const getToken = http.request(values,res =>{
-                     console.log(`status code: ${res.statusCode}`)
+                     console.log('status code: ${res.statusCode}')
                      var jsonString = "" 
      
                     res.on('data', d => {
@@ -155,8 +155,8 @@ exports.execute = function (req, res) {
                     var resData = JSON.parse(jsonString);
                     accTok += resData.access_token
                     restURL += resData.rest_instance_url
-                    console.log(`Access Token : ` + accessToken); 
-                    console.log(`Rest URL Endpoint : ` + restURL);
+                    console.log('Access Token : ' + accessToken); 
+                    console.log('Rest URL Endpoint : ' + restURL);
 
                    // yaha se start hora h 
                     const TrackingData = {
@@ -193,7 +193,7 @@ exports.execute = function (req, res) {
 
             
 
-            console.log(message)
+            console.log(message);
         })
         .done(); 
     // FOR TESTING
