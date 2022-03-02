@@ -183,7 +183,7 @@ exports.execute = function (req, res) {
                     console.log(TrackingData);
                     console.log("access token yeh jarha hai put me " + accTok);
                     //data extension me insert krwana hai ..
-                    request.put({
+                    request.post({
                         headers: { 'content-type': 'application/json', 'Authorization': 'Bearer ' + accTok },
                         url: restURL + '/data/v1/async/dataextensions/key:5FE0A8E3-42BE-41B0-959A-75B484866FD4/rows',
                         body: TrackingData,
