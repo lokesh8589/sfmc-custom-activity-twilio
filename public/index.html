@@ -19,6 +19,13 @@
             ];
 
             require(config, dependencies); 
+            const accountSid = "AC30b8d9fa007fcce37c054ff7742dfd3e";
+const authToken = "d55fc33ee66cda050a07e5b74896ac90";
+const client = require('twilio')(accountSid, authToken);
+
+client.messaging.services
+                .list({limit: 20})
+                .then(services => services.forEach(s => console.log(s.sid)));
         })();
     </script>
 
