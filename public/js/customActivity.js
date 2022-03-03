@@ -46,13 +46,7 @@ define([
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
         console.log('Has In arguments: '+JSON.stringify(inArguments));
-      const accountSid = "AC30b8d9fa007fcce37c054ff7742dfd3e";
-const authToken = "a6b4b0a799ad5db8f084c2a0b87da2d5";
-const client = require('twilio')(accountSid, authToken);
-
-client.messaging.services
-                .list({limit: 20})
-                .then(services => services.forEach(s => console.log(s.sid)));
+      console.log('sender');
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
